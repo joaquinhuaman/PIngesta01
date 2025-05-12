@@ -1,10 +1,5 @@
-FROM python:3.9-slim
-
-WORKDIR /app
-
-COPY requirements.txt ./
+FROM python:3-slim
+WORKDIR /programas/ingesta
+COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
-
-COPY ingesta.py ./
-
 CMD ["python", "ingesta.py"]
