@@ -31,7 +31,7 @@ df = pd.read_sql(query, conn)
 conn.close()
 
 # --- Guardar como CSV ---
-file_path = "/app/salida.csv"
+file_path = "/programas/ingesta/salida.csv"
 df.to_csv(file_path, index=False)
 
 # --- Subir a S3 ---
